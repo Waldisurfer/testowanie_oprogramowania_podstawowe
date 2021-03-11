@@ -18,12 +18,16 @@ class TextCalculator {
 
     char symbol = phrase.charAt(1);
 
-    if (symbol != '+') {
-      throw new RuntimeException("Symbol " + symbol + " is not supported!");
-    }
-
     int secondNumber = Character.getNumericValue(phrase.charAt(2));
 
-    return firstNumber + secondNumber;
+    if (symbol != '+' && symbol != '-') {
+      throw new RuntimeException("Symbol " + symbol + " is not supported!");
+    }
+    else if (symbol == '+') {
+      return firstNumber + secondNumber;
+    }
+    else {
+      return firstNumber - secondNumber;
+    }
   }
 }
