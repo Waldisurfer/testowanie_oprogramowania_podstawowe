@@ -2,6 +2,7 @@ package dev.karolkoltun.expenses;
 
 import dev.karolkoltun.currency.Currency;
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
@@ -49,9 +50,16 @@ class HomeFinancesServiceTest {
         assertEquals(expense, addedExpense);
 
     }
+    @BeforeEach
+    HomeFinancesService homeFinancesService = new HomeFinancesService();
+
     @Test
-    void assertJ(){
+    void addingExpensesHomework() {
+        //Given
 
     }
+
+
+
 
 }
